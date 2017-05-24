@@ -1,7 +1,48 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title> Justin Bell - Online </title>
+    	<meta charset="utf-8">
+    	<link rel="stylesheet" href="Main_Desktop_Style.css">
+    	<script JQUERY src="jquery-3.1.1.min.js"></script>
+    	<script Controller src="Portfolio_Controller.js"></script>
+    </head>
 	<body>
-		<h1>Hello World</h1>
-		<p>I'm hosted with GitHub Pages.</p>
-		</body>
+		<center>
+		<div class="Inner_Wrap">
+			<div class="Main_Title"> 
+				<img src="Portfolio-Emblem.png" height="300" width="530">
+			</div>
+			<table id="Link_Table">
+				<tr>
+					<td class="quadrant" onclick="About_Me(this)">
+						<div class="flipper" onclick="this.classList.toggle('flipped')">
+							<h3 class="bullets"> About Me </h3>
+						</div>
+					</td>
+					<td class="quadrant" onclick="Projects()">
+						<div class="flipper" onclick="this.classList.toggle('flipped')">
+							<h3 class="bullets"> Projects </h3>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="quadrant" onclick="Resume()">
+						<div class="flipper" onclick="this.classList.toggle('flipped')">
+							<h3 class="bullets"> Resume </h3>
+						</div>
+					</td>
+					<td class="quadrant" onclick="Education()">
+						<div class="flipper" onclick="this.classList.toggle('flipped')">
+							<h3 class="bullets"> Education </h3>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="content">
+				<img src="Leaf.png">
+			</div>
+		</div>
+		</center>
+	</body>
 </html>

@@ -1,0 +1,86 @@
+/* Main Page css. */
+html,body{
+	height: 100%;
+}
+body{
+	display: table;
+	margin: 0 auto;
+	background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(black, white, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, white, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, white, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, white, black); /* Standard syntax */
+	
+}
+
+div.Inner_Wrap{
+	margin: auto;
+    top: 50%;
+    left: 50%;
+    position: absolute;  
+    margin-left:-265px;
+	margin-top:-375px;
+
+}
+#Link_Table{
+	width: 530px;
+	text-align: center;
+	border-radius: 20px;
+	vertical-align: center;
+}
+
+td.quadrant{
+	padding: 0;
+	border: 3px solid black;
+	border-radius: 5px;
+	padding-bottom: 0px;
+	-webkit-perspective: 150px; /* Chrome, Safari, Opera  */
+    perspective: 150px;
+}
+
+td.quadrant:hover{
+	background-color: #d12727;
+	color: white;
+}
+
+.active{
+	background-color: #c10f0f;
+	color: white;
+}
+
+.content{
+	height: 355px;
+	width: 524px;
+	border: 3px solid black;
+	border-radius: 10px;
+	color: red;
+}
+
+h3.bullets{
+	margin: 5px;
+}
+
+.flipper{
+	height: 100%;
+	margin-top: -5px;
+}
+.flipped{
+-webkit-transform:rotateY(360deg);
+   -moz-transform:rotateY(360deg);
+    -ms-transform:rotateY(360deg);
+     -o-transform:rotateY(360deg);
+        transform:rotateY(360deg);
+
+   	/*transition*/
+-webkit-transition:0.5s;
+   -moz-transition:0.5s;
+     -o-transition:0.5s;
+        transition:0.5s;
+/*transform-style*/
+-webkit-transform-style:preserve-3d;
+   -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+     -o-transform-style:preserve-3d;
+        transform-style:preserve-3d;
+position:relative;
+}
