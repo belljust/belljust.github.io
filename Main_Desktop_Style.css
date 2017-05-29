@@ -36,6 +36,7 @@ td.quadrant{
 	padding-bottom: 0px;
 	-webkit-perspective: 150px; /* Chrome, Safari, Opera  */
     perspective: 150px;
+    cursor: pointer;
 }
 
 td.quadrant:hover{
@@ -77,10 +78,97 @@ h3.bullets{
      -o-transition:0.5s;
         transition:0.5s;
 /*transform-style*/
--webkit-transform-style:preserve-3d;
-   -moz-transform-style:preserve-3d;
-    -ms-transform-style:preserve-3d;
-     -o-transform-style:preserve-3d;
-        transform-style:preserve-3d;
-position:relative;
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	    -ms-transform-style: preserve-3d;
+	     -o-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	position:relative;
+}
+
+
+.CurrentPhoto{
+	position: relative;
+	max-width: 510px;
+	max-height: 270px;
+	border: 4px dashed red;
+	z-index: 1;
+	margin-left: -25px;
+}
+
+.CurrentPhoto.zoom{
+	-moz-transform: scale(1.6);
+	-webkit-transform: scale(1.6);
+	transform: scale(1.6);
+	border: 4px dashed red;
+	transition: transform 0.20s ease;
+
+
+}
+
+.Controls{
+	text-decoration: underline;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    display: inline;
+}
+
+.Controls h2{
+	border-bottom: 3px solid black;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+.ProjectTable{
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+	position: absolute;
+	left: 30px;
+	bottom: 160px;
+}
+
+.ProjectTable h3{
+	width: 175px;
+	background-color: white;
+	border: 2px dotted black;
+	border-radius: 5px;
+}
+
+.ProjectTable h3:hover{
+	background-color: grey;
+}
+
+.ProjectTable td{
+	cursor: pointer;
+}
+
+.heading{
+	width: 100%;
+	text-align: center;	
+}
+
+.ZoomIn.ZoomedIn{
+	position: relative;
+	left: -110px;
+	bottom: -70px;
+
+}
+
+.ZoomIn{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	z-index: 2;
+	margin-right: -10px;
+	cursor: pointer;
+}
+
+.Photo{
+	
+}
+
+.projects_tree{
+	position: relative;
+	bottom: 58px;
+	width: 525px;
 }
