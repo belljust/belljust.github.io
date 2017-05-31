@@ -1,3 +1,9 @@
+$(document).ready(function(){
+	console.log("DOM Loaded");
+	PhotoNum = 1;
+	MaxPhotos = 0;
+	CurrentFolder = "";
+});
 
 $(document).on("click", ".quadrant",function(){
 	console.log("a link was pressed");
@@ -11,27 +17,37 @@ $(document).on("click", ".flipper",function(){
 });
 
 $(document).on("click", ".ZoomIn",function(){
-	if($(this).hasClass('ZoomedIn')){
-		ZoomOut();
-	}
-	else{
-		ZoomIn();
-	}
-	
+	if($(this).hasClass('ZoomedIn')){ ZoomOut(); }
+	else{ ZoomIn(); }
+});
+
+$(document).on("click", ".info_exit.info",function(){
+	$('.Photo').toggleClass('aboutProject');
+	$(this).removeClass('info');
+	$(this).addClass('exit');
+	$(this).attr('src','Misc_Pics/exit.png');
+	loadInfo();
+});
+
+$(document).on("click", ".info_exit.exit",function(){
+	$('.Photo').toggleClass('aboutProject');
+	DisplayPhotos(CurrentFolder,PhotoNum);
+});
+
+$(document).on('click','.linkedin',function(){
+	window.open('https://www.linkedin.com/in/justin-bell-6823a4137');
+});
+
+$(document).on('click','.github',function(){
+	window.open('https://github.com/belljust');
 });
 
 
-
-$(document).ready(function(){
-	console.log("DOM Loaded");
-	PhotoNum = 1;
-	MaxPhotos = 0;
-	CurrentFolder = "";
-});
 
 function DisplayPhotos(folder,num){
 	var photo = '<img class="ZoomIn" src="Misc_Pics/zoom.png">' +
-		'<img class="CurrentPhoto" src="' + folder + '/Pic' + PhotoNum + '.png">';
+		'<img class="CurrentPhoto" src="' + folder + '/Pic' + PhotoNum + '.png">' +
+		'<img class="info_exit info" src="Misc_Pics/info.png">';
 	$(".Photo").html(photo);
 	console.log(photo);
 }
@@ -40,13 +56,14 @@ function ZoomIn(){
 	$(".CurrentPhoto").toggleClass('zoom');
 	$(".ZoomIn").attr('src','Misc_Pics/unzoom.png');
 	$(".ZoomIn").toggleClass('ZoomedIn');
+	$('.info_exit').hide();
 }
 
 function ZoomOut(){
 	$(".CurrentPhoto").toggleClass('zoom');
 	$(".ZoomIn").attr('src','Misc_Pics/zoom.png');
 	$(".ZoomIn").toggleClass('ZoomedIn');
-
+	$('.info_exit').show();
 }
 
 
@@ -63,6 +80,21 @@ function Projects(){
 	$(".Photo").html(ProjectList);
 
 }
+
+function loadInfo(){
+	switch(CurrentFolder){
+		case 'TA_Software':
+			RequiredInfo = 'Misc_Pics/TA_info.png'; break;
+		case 'Yak-Yik':
+			RequiredInfo = 'Misc_Pics/YY_info.png'; break;
+		case 'WW':
+			RequiredInfo = 'Misc_Pics/WW_info.png'; break;
+		default: 
+			RequiredInfo = 'Misc_Pics/Leaf.png';
+	}
+	$('.CurrentPhoto').attr('src',RequiredInfo);
+}
+
 
 function Run_TA_Software(){
 	var heading = '<table class="heading"><tr>' +
@@ -134,17 +166,20 @@ function PrevPhoto(){
 
 function Resume(){
 	$(".Controls").html('<h2>My Resume</h2>');
-	$(".Photo").html('<h2>Some Stuff Here</h2>');
+	var ResumeContent = '<img src="Misc_Pics/github.png" class="github">' +	
+						'<img src="Misc_Pics/linkedin.png" class="linkedin"> <br> ' +	
+						'<a href="Justin_Bell_Resume.pdf" class="resume" download> Download Resume </a>';
+	$(".Photo").html(ResumeContent);
 }
 
 function Education(){
 	$(".Controls").html('<h2>My Education</h2>');
-	$(".Photo").html('<h2>Some Stuff Here</h2>');
+	$(".Photo").html('<h2>Coming Soon!</h2>');
 }
 
 function About_Me(this_div){
 	$(".Controls").html('<h2>About Me</h2>');
-	$(".Photo").html('<h2>Some Stuff Here</h2>');
+	$(".Photo").html('<h2>Coming Soon!<h2>');
 }
 
 
