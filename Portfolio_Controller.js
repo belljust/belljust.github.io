@@ -26,11 +26,13 @@ $(document).on("click", ".info_exit.info",function(){
 	$(this).removeClass('info');
 	$(this).addClass('exit');
 	$(this).attr('src','Misc_Pics/exit.png');
+	$('.CurrentPhoto').toggleClass('aboutProject');
 	loadInfo();
 });
 
 $(document).on("click", ".info_exit.exit",function(){
 	$('.Photo').toggleClass('aboutProject');
+	$('.CurrentPhoto').toggleClass('aboutProject');
 	DisplayPhotos(CurrentFolder,PhotoNum);
 });
 
@@ -73,8 +75,9 @@ function Projects(){
 	var ProjectList = '<img src="Misc_Pics/projects_tree.png" class="projects_tree">' +
 					  '<table class="ProjectTable" >' +
 						'<tr><td><h3 class="TAProject" onclick="Run_TA_Software()">UofT TA Software</h3></td>' +
-							'<td><h3 class="Yak-Yik" onclick="Run_YakYik()">Yik-Yak Clone</h3></td></tr>' +
-						'<tr><td><h3 class="WarehouseWars" onclick="Run_WW()">Warehouse Wars</h3></td></tr>'
+							'<td><h3 class="TTC" onclick="Run_TTC()">TTC App</h3></td></tr>' +
+						'<tr><td><h3 class="Yak-Yik" onclick="Run_YakYik()">Yik-Yak Clone</h3></td>' +
+							'<td><h3 class="WarehouseWars" onclick="Run_WW()">Warehouse Wars</h3></td></tr>' +
 					  '</table>';
 
 	$(".Photo").html(ProjectList);
@@ -108,6 +111,17 @@ function Run_TA_Software(){
 	MaxPhotos = 11;
 	PhotoNum = 1;
 	DisplayPhotos(CurrentFolder,PhotoNum);
+}
+
+function Run_TTC(){
+	$(".Controls").html('');
+	var TTC_link = '<img src="Misc_Pics/TTC_info.png" class="TTC_info"><br>' + 
+				   '<a href="TTC/demo-phone.html" class="TTC_link">Visit TTC Application</a>';
+	$('.Photo').html(TTC_link);
+	setTimeout(function(){
+		$('.TTC_link').addClass('load');
+	}, 500);
+	
 }
 
 function Run_YakYik(){

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<header>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<title>CSC318 P9 AlthaQ</title>
+	<link rel="stylesheet" href="demo2.css"> 
+	<script type="text/javascript" src="demo2.js"></script>
+</header>
+
+<body>
+
+<!-- Main frame -->
+<div id="device">
+	<div id="root">
+
+		
+		<div id="login" class="wrapper">
+		<!--#################### Log in Screen ####################-->
+
+			<div id="loginbg" class="red"></div>
+			<div id="loginContainer">
+			<img src="./src/icon/ttc.png"/><br/>
+			<div class="avatar" style="background-image: url(./src/icon/avatar.png)"></div>
+
+			<input type="text" id="username" placeholder="Username" class="float login"></input><input type="password" id="password" placeholder="Password" class="float login"></input>
+			<button class="button redbutton login" onclick="signin()"> Sign In</button><br/>
+			<button class="button greybutton login" style="margin-top: 10%;" onclick="toPage(5)"> Sign Up</button>
+
+			<span id="loginFooter" class="smalltext" onclick="signin()">Alpha Q</span>
+
+			</div>
+
+		</div
+
+
+		><div id="status" class="wrapper">
+		<!--#################### Status Screen ####################-->
+
+			<div id="destBannerContainer">
+				<ul id="destBanner">
+					<!-- Do not remove the seems-redundant divs. They are the little maps -->
+					<li><span>Dupont</span></li
+					><li><span>Spadina</span><img id="i_loc"src="./src/icon/location_red.png"/></li
+					><li><span>St George</span></li
+					><li><span>Museum</span></li
+					><li><span>Queen's Park</span></li
+					><li><span>St Patrick</span></li
+					><li><span>Osgoode</span></li
+					><li><span>St Andrew</span></li
+					><li><span>Union</span></li
+					><li><span>King</span></li
+					><li><span>Queen</span></li
+					><li><span>Dundas</span></li
+					><li><span>College</span></li
+					><li><span>Wellseley</span></li
+					><li><span>Bloor-Yonge</span></li
+					><li><span>Rosedale</span></li
+					><li><span>Clear Selection</span><img style="margin: 18% auto;" src="./src/icon/cross_red.png"/></li>
+				</ul>
+			</div>
+
+			<div id="delays">
+				<div class="delayListings">
+
+				<div id="recentHeader">Recent</div>
+					<div style="background-color: #ffffcc">Electric malfunction at Spadina Station<br/><img src="./src/icon/location_h.png"/><span>Spadina Station</span><img src="./src/icon/delay_red.png"/><span>~1 min left</span></div>
+					<div>Union Station Renewal Project closes one track, causing east platform overcrowded. <br/><img src="./src/icon/location_h.png"/><span>Union Station East-bound Platform</span><img src="./src/icon/delay_red.png"/><span>15 min</span></div>
+					<div>Road construction at Yonge St and College St crossing causing buss detour.<br/><img src="./src/icon/location_h.png"/><span>Various</span><img src="./src/icon/delay_red.png"/><span>Permanent</span></div>
+
+				<div id="upcomingHeader">Upcoming</div>
+					<div>No subway service between Lawrance and Finch this Saturday. Please use shuttle. We apologize for the inconvenience.<br/><img src="./src/icon/location_h.png"/><span>Lawrance Stn to Finch Stn</span><img src="./src/icon/delay_red.png"/><span>Saturday</span></div>
+					
+				</div>
+			</div>
+
+		</div
+
+
+		><div id="news" class="wrapper">
+		<!--#################### News Screen ####################-->
+
+			<div class="tabs" id="tabs">
+				<div>
+					<span>Headline</span
+					><span>Business</span 
+					><span>World</span
+					><span>Health</span  
+					><span>Amusement</span 
+					><span>Sport</span
+					><span>Technology</span>
+				</div>
+			</div>
+
+            <div id="pageFrame">
+                <div class="newsPage">
+                    <div class="newsStory">
+                    	<img src="./src/icon/news1.png"/>
+                        <p class="newsStoryTitle">Tax authorities begin probes into some people named in Panama Papers leak</p>
+                        <p class="newsStoryPreview">Tax authorities in Australia and New Zealand are probing local clients of a Panama-based law firm at the center of a massive data leak for possible tax evasion.</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Sidney Crosby scores the first goal against the Flyers</p>
+                        <p class="newsStoryPreview">The best player in the world, Sidney Crosby, is leading his Pittsburgh Penguins hockey club to new heights just as the playoffs are about to begin!</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Beau Bennett breaks out with a goal to build the lead!</p>
+                        <p class="newsStoryPreview">Penguins now lead the Flyers 2-0 as Flyers fail to build momentum in the first period.</p>
+                    </div>
+                </div
+                ><div class="newsPage">
+                    <!-- Business -->
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Sidney Crosby and Pittsburgh Penguins are on fire!</p>
+                        <p class="newsStoryPreview">The best player in the world, Sidney Crosby, is leading his Pittsburgh Penguins hockey club to new heights just as the playoffs are about to begin!</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Sidney Crosby scores the first goal against the Flyers</p>
+                        <p class="newsStoryPreview">The best player in the world, Sidney Crosby, is leading his Pittsburgh Penguins hockey club to new heights just as the playoffs are about to begin!</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Beau Bennett breaks out with a goal to build the lead!</p>
+                        <p class="newsStoryPreview">Penguins lead the Flyers 2-0.</p>
+                    </div>
+                </div
+                ><div class="newsPage">
+                    <!-- World -->
+                    <div class="newsStory">
+                    	<img src="./src/icon/news2.png"/>
+                        <p class="newsStoryTitle">Tax authorities begin probes into some people named in Panama Papers leak</p>
+                        <p class="newsStoryPreview">Tax authorities in Australia and New Zealand are probing local clients of a Panama-based law firm at the center of a massive data leak for possible tax evasion.</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Sidney Crosby scores the first goal against the Flyers</p>
+                        <p class="newsStoryPreview">The best player in the world, Sidney Crosby, is leading his Pittsburgh Penguins hockey club to new heights just as the playoffs are about to begin!</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Beau Bennett breaks out with a goal to build the lead!</p>
+                        <p class="newsStoryPreview">Penguins now lead the Flyers 2-0 as Flyers fail to build momentum in the first period.</p>
+                    </div>
+                </div
+                ><div class="newsPage">
+                    <!-- Health -->
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Sidney Crosby and Pittsburgh Penguins are on fire!</p>
+                        <p class="newsStoryPreview">The best player in the world, Sidney Crosby, is leading his Pittsburgh Penguins hockey club to new heights just as the playoffs are about to begin!</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Sidney Crosby scores the first goal against the Flyers</p>
+                        <p class="newsStoryPreview">The best player in the world, Sidney Crosby, is leading his Pittsburgh Penguins hockey club to new heights just as the playoffs are about to begin!</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Beau Bennett breaks out with a goal to build the lead!</p>
+                        <p class="newsStoryPreview">Penguins lead the Flyers 2-0.</p>
+                    </div>
+                </div
+                ><div class="newsPage">
+                    <!-- Amusement -->
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Sidney Crosby scores the first goal against the Flyers</p>
+                        <p class="newsStoryPreview">The best player in the world, Sidney Crosby, is leading his Pittsburgh Penguins hockey club to new heights just as the playoffs are about to begin!</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Tax authorities begin probes into some people named in Panama Papers leak</p>
+                        <p class="newsStoryPreview">Tax authorities in Australia and New Zealand are probing local clients of a Panama-based law firm at the center of a massive data leak for possible tax evasion.</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Sidney Crosby scores the first goal against the Flyers</p>
+                        <p class="newsStoryPreview">The best player in the world, Sidney Crosby, is leading his Pittsburgh Penguins hockey club to new heights just as the playoffs are about to begin!</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Beau Bennett breaks out with a goal to build the lead!</p>
+                        <p class="newsStoryPreview">Penguins now lead the Flyers 2-0 as Flyers fail to build momentum in the first period.</p>
+                    </div>
+                </div
+                ><div class="newsPage">
+                    <!-- Sport -->
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Sidney Crosby and Pittsburgh Penguins are on fire!</p>
+                        <p class="newsStoryPreview">The best player in the world, Sidney Crosby, is leading his Pittsburgh Penguins hockey club to new heights just as the playoffs are about to begin!</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Sidney Crosby scores the first goal against the Flyers</p>
+                        <p class="newsStoryPreview">The best player in the world, Sidney Crosby, is leading his Pittsburgh Penguins hockey club to new heights just as the playoffs are about to begin!</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Beau Bennett breaks out with a goal to build the lead!</p>
+                        <p class="newsStoryPreview">Penguins lead the Flyers 2-0.</p>
+                    </div>
+                </div
+                ><div class="newsPage">
+                    <!-- Technology -->
+                    <div class="newsStory">
+                    <img src="./src/icon/news3.png"/>
+                        <p class="newsStoryTitle">Tax authorities begin probes into some people named in Panama Papers leak</p>
+                        <p class="newsStoryPreview">Tax authorities in Australia and New Zealand are probing local clients of a Panama-based law firm at the center of a massive data leak for possible tax evasion.</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Sidney Crosby scores the first goal against the Flyers</p>
+                        <p class="newsStoryPreview">The best player in the world, Sidney Crosby, is leading his Pittsburgh Penguins hockey club to new heights just as the playoffs are about to begin!</p>
+                    </div>
+                    <div class="newsStory">
+                        <p class="newsStoryTitle">Beau Bennett breaks out with a goal to build the lead!</p>
+                        <p class="newsStoryPreview">Penguins now lead the Flyers 2-0 as Flyers fail to build momentum in the first period.</p>
+                    </div>
+                </div>
+            </div>
+        </div
+
+
+		><div id="games" class="wrapper"><div>
+		<!--#################### Games Screen ####################-->
+			<div id="tileBlocker" onclick="gameCollapse()"></div>
+			
+			<div style="margin-top: 50px;" class="tileWrapper">
+				<div><button>PLAY!</button><br/><img src="./src/icon/trivia.png"/><span>Trivia</span></div>
+				<div>
+					<img alt="5"></img>
+					<div>Welcome to Trivia! In this game you will choose questions to answer by picking a number from the board. You get the score if your answer is correct. Click the "Play!" button and see how much you can score!</div>
+					<div>LeaderBoard<br/>
+					<pre>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</pre>
+					<pre>lockedbtch<br>belljustice<br>nynjack<br>Uniq3<br>fairyTail<br>biubiubiu<br>selfiecaked<br>X.A.N.A.<br>nynjack<br>j_butler4<br></pre>
+					<pre>1000<br>1000<br>1000<br>990<br>790<br>790<br>720<br>690<br>660<br>640<br></pre>
+					</div>
+				</div>
+
+				<div><button>PLAY!</button><br/><img src="./src/icon/rlsovch.png"/><span>Rlsovch</span></div>
+				<div>
+					<img alt="4"></img>
+					<div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes!</div>
+					<div>LeaderBoard<br/>
+					<pre>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</pre>
+					<pre>Ipple<br>ichibanTakaramono<br>belljustice<br>Locknload<br>lockedbtch<br>Ipple<br>Uniq3<br>Ipple<br>Uniq3<br>NixxiN<br></pre>
+					<pre>940<br>930<br>890<br>860<br>800<br>780<br>740<br>730<br>670<br>620<br></pre>
+					</div>
+				</div>
+			</div>
+
+			<div class="tileWrapper">
+				<div><button>PLAY!</button><br/><img src="./src/icon/dboinr.png"/><span>Dboinr en abopa</span></div>
+				<div>
+					<img alt="4"></img>
+					<div>Farius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maece.</div>
+					<div>LeaderBoard<br/>
+					<pre>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</pre>
+					<pre>lockedbtch<br>belljustice<br>nynjack<br>Uniq3<br>fairyTail<br>biubiubiu<br>selfiecaked<br>X.A.N.A.<br>nynjack<br>j_butler4<br></pre>
+					<pre>1000<br>1000<br>1000<br>990<br>790<br>790<br>720<br>690<br>660<br>640<br></pre>
+					</div>
+				</div>
+
+				<div><button>PLAY!</button><br/><img src="./src/icon/oosbs.png"/><span>Oosbs Dupanze</span></div>
+				<div>
+					<img alt="5"></img>
+					<div>Eleinvs! Sapien ut libero venenatis faucibus. Nullam quis ante! Etiam sit amet manga!</div>
+					<div>LeaderBoard<br/>
+					<pre>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</pre>
+					<pre>Ipple<br>ichibanTakaramono<br>belljustice<br>Locknload<br>lockedbtch<br>Ipple<br>Uniq3<br>Ipple<br>Uniq3<br>NixxiN<br></pre>
+					<pre>940<br>930<br>890<br>860<br>800<br>780<br>740<br>730<br>670<br>620<br></pre>
+					</div>
+				</div>
+			</div>
+
+			<div class="tileWrapper">
+				<div><button>PLAY!</button><br/><img src="./src/icon/labulinga.png"/><span>Labulinga!</span></div>
+				<div>
+					<img alt="2"></img>
+					<div>Uropan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular.</div>
+					<div>LeaderBoard<br/>
+					<pre>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</pre>
+					<pre>ichibanTakaramono<br>selfiecaked<br>IpExposure1992<br>ichibanTakaramono<br>Nex2you<br>pryankk<br>selfiecaked<br>canadianbeef<br>ichibanTakaramono<br>X.A.N.A.<br></pre>
+					<pre>1200<br>970<br>940<br>900<br>900<br>750<br>740<br>730<br>710<br>620<br></pre>
+					</div>
+				</div>
+
+				<div><button>PLAY!</button><br/><img src="./src/icon/meimi.png"/><span>Dostano Meimi?</span></div>
+				<div>
+					<img alt="3"></img>
+					<div>Grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues.</div>
+					<div>LeaderBoard<br/>
+					<pre>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</pre>
+					<pre>canadianbeef<br>Nex2you<br>nynjack<br>Nex2you<br>X.A.N.A.<br>Locknload<br>pryankk<br>j_butler4<br>pryankk<br>nynjack<br></pre>
+					<pre>980<br>960<br>900<br>830<br>820<br>770<br>730<br>700<br>670<br>660<br></pre>
+					</div>
+				</div>
+			</div>
+
+			<div class="tileWrapper">
+				<div><button>PLAY!</button><br/><img src="./src/icon/esdlse.png"/><span>Esdlse</span></div>
+				<div>
+					<img alt="4"></img>
+					<div>Si, Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rut.</div>
+					<div>LeaderBoard<br/>
+					<pre>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</pre>
+					<pre>fairyTail<br>NixxiN<br>canadianbeef<br>yocrude<br>NixxiN<br>sunEqLight<br>Nex2you<br>Nex2you<br>pryankk<br>Uniq3<br></pre>
+					<pre>990<br>960<br>890<br>840<br>760<br>750<br>710<br>670<br>650<br>630<br></pre>
+					</div>
+				</div>
+
+				<div><button>PLAY!</button><br/><img src="./src/icon/noznd.png"/><span>NoznD</span></div>
+				<div>
+					<img alt="1"></img>
+					<div>Farius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maece.</div>
+					<div>LeaderBoard<br/>
+					<pre>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</pre>
+					<pre>belljustice<br>selfiecaked<br>lockedbtch<br>j_butler4<br>canadianbeef<br>NixxiN<br>NixxiN<br>sunEqLight<br>IpExposure1992<br>sunEqLight<br></pre>
+					<pre>960<br>930<br>910<br>900<br>900<br>830<br>730<br>730<br>670<br>650<br></pre>
+					</div>
+				</div>
+			</div>
+
+		</div
+
+
+		></div><div id="msg" class="wrapper">
+		<!--#################### Messages Screen ####################-->
+			<div class="tabs" id="three_tabs">
+				<span>General</span
+				><span>Contacts</span
+				><span>Private</span>
+			</div>
+
+			<div id="msgPageFrame">
+				<div id="general">
+					<div class="msgPage">
+
+						<div class="msgContainer">
+							<div class="msgLeft"><img src="./src/icon/beef.png"></img><span>LadiesMan420</span><div><div>Hello everyone!</div><span>19:30 Today</span></div></div>
+							<div class="msgRight"><img src="./src/icon/avatar.png"></img><span>Me</span><div><div>Hi!</div><span>19:32 Today</span></div></div>
+							<div class="msgLeft"><img src="./src/icon/justice.png"></img><span>[nothin_here]</span><div><div>Hey.</div><span>19:33 Today</span></div></div>
+							<div class="msgLeft"><img src="./src/icon/beef.png"></img><span>LadiesMan420</span><div><div>So there are actually people using this thing.</div><span>19:33 Today</span></div></div>
+							<div class="msgLeft"><img src="./src/icon/default.png"></img><span>Jasonchou</span><div><div>How do I turn off these notifications?</div><span>19:35 Today</span></div></div>
+							<div class="msgLeft"><img src="./src/icon/beef.png"></img><span>LadiesMan420</span><div><div>Settings? Try tapping the top right.</div><span>19:35 Today</span></div></div>
+							<div class="msgRight"><img src="./src/icon/avatar.png"></img><span>Me</span><div><div>Right its in settings under private section.</div><span>19:35 Today</span></div></div>
+							<div class="msgRight"><img src="./src/icon/avatar.png"></img><span>Me</span><div><div>Are you talking about location notifications? You can remove your destination selection.</div><span>19:35 Today</span></div></div>
+							<div class="msgLeft"><img src="./src/icon/default.png"></img><span>Jasonchou</span><div><div>Yeah. Thanks I got it.</div><span>19:35 Today</span></div></div>
+						</div>
+
+						<div class="inputBar">
+							<div class="button" style="background-image: url(./src/icon/plus.png)"></div>
+							<textarea type="textarea" id="generalInput" placeholder="I want to say ..." class="float"></textarea>
+							<div class="button"  style="background-image: url(./src/icon/send.png)" onclick="send(0)"></div>
+						</div>
+
+					</div>
+				</div
+				><div>
+					<div class="msgPage">
+						<div>
+							<div class="contactHeader">Nearby</div>
+							<div class="people"><img src="./src/icon/beef.png"></img><div>LadiesMan420</div><span>This is the self-introduction or hi to the public. This sentence could be very long</span></div>
+							<div class="people"><img src="./src/icon/default.png"></img><div>Jasonchou</div><span>Hello everyone!</span></div>
+							<div class="people"><img src="./src/icon/prohibit.png"></img><div>birdcourses</div><span>This person is lazy...</span></div>
+							<div class="people"><img src="./src/icon/justice.png"></img><div>[nothin_here]</div><span>Saikou</span></div>
+
+							<div class="contactHeader">History</div>
+							<div class="people"><img src="./src/icon/mario.png"></img><div>Nothx</div><span>Yes you can!</span></div>
+							<div class="people"><img src="./src/icon/nan.png"></img><div>nandospizza</div><span>dozznanpi</span></div>
+							<div class="people"><img src="./src/icon/default.png"></img><div>mickymouse3</div><span>This person is lazy...</span></div>
+						</div>
+					</div>
+				</div
+				><div id="private">
+					<div class="msgPage">
+
+						<div class="msgContainer">
+							<div class="msgRight"><img src="./src/icon/avatar.png"></img><span>Me</span><div><div>Hi there!</div><span>19:32 Today</span></div></div>
+							<div class="msgLeft"><img src="./src/icon/beef.png"></img><span>LadiesMan420</span><div><div>Oh you the guy from the game just now?</div><span>19:37 Today</span></div></div>
+						</div>
+						<div class="msgContainer" style="background-image: url(./src/icon/nothing.png)">
+						</div>
+						<div class="msgContainer" style="background-image: url(./src/icon/nothing.png)">
+						</div>
+						<div class="msgContainer" style="background-image: url(./src/icon/nothing.png)">
+						</div>
+						<div class="msgContainer">
+							<div class="msgRight"><img src="./src/icon/avatar.png"></img><span>Me</span><div><div>Hi,</div><span>19:32 Yesturday</span></div></div>
+							<div class="msgLeft"><img src="./src/icon/nan.png"></img><span>Nothx</span><div><div>Hello.</div><span>19:36 Yesturday</span></div></div>
+							<div class="msgRight"><img src="./src/icon/avatar.png"></img><span>Me</span><div><div>I saw your username this morning. You took Line 1 too?</div><span>19:36 Today</span></div></div>
+						</div>
+						<div class="msgContainer">
+							<div class="msgRight"><img src="./src/icon/avatar.png"></img><span>Me</span><div><div>Hi there!</div><span>19:29 Yesturday</span></div></div>
+						</div>
+						<div class="msgContainer">
+							<div class="msgRight"><img src="./src/icon/avatar.png"></img><span>Me</span><div><div>Hi there, just saying hello</div><span>19:34 April 1</span></div></div>
+							<div class="msgLeft"><img src="./src/icon/default.png"></img><span>mickymouse3</span><div><div>Oh hi</div><span>19:36 April 1</span></div></div>
+							<div class="msgRight"><img src="./src/icon/avatar.png"></img><span>Me</span><div><div>Hi, your shoelace came lose</div><span>19:37 April 1</span></div></div>
+							<div class="msgLeft"><img src="./src/icon/default.png"></img><span>mickymouse3</span><div><div>Yeah happy April fools day</div><span>19:37 April 1</span></div></div>
+							<div class="msgLeft"><img src="./src/icon/default.png"></img><span>mickymouse3</span><div><div>No it was real. Who are you</div><span>19:39 April 1</span></div></div>
+							<div class="msgRight"><img src="./src/icon/avatar.png"></img><span>Me</span><div><div>happy april fools day</div><span>19:40 April 1</span></div></div>
+						</div>
+
+						<div class="inputBar">
+							<div class="button" style="background-image: url(./src/icon/plus.png)"></div>
+							<textarea type="textarea" id="generalInput" placeholder="I want to say ..." class="float"></textarea>
+							<div class="button" style="background-image: url(./src/icon/send.png)" id="privateSend" onclick="send(1)"></div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div
+
+
+		><div id="signup" class="wrapper">
+		<!--#################### Sign Up Screen ####################-->
+			<div id="signupbg" class="red"></div>
+			<div id="signupContainer">
+			<div class="avatar" style="background-image: url(./src/icon/default.png)"></div>
+
+			<button class="button greybutton login"> Upload Profile Image</button>
+
+			<input type="text" id="usernameSignUp" style="margin-top: 10%;" placeholder="Username" class="float login"></input>
+			<input type="password" id="passwordSignUp" placeholder="Password" class="float login"></input><input type="password" id="passwordConfirm" placeholder="Confirm Password" class="float login"></input>
+
+			<button class="button redbutton login" style="margin-top: 10%;" onclick="toPage(0)"> Sign Up!</button>
+			<span id="loginFooter" class="smalltext" onclick="signin()">Alpha Q</span>
+			</div>
+		</div
+
+
+		><div id="fullnews" class="wrapper">
+		<!--#################### News Details Screen ####################-->
+			full news
+		</div
+
+
+		><div id="settings" class="wrapper">
+		<!--#################### Settings Screen ####################-->
+			<div>
+				<div class="avatarSettings" style="background-image: url(./src/icon/avatar.png)"></div>
+				<div id="nameContainer">
+					<span>Username: Me</span>
+					<span>Nickname: Me</span>
+				<p style="margin-bottom: 0;">Public Message: Hello World!</p>
+				</div>
+			</div>
+			<div>
+				Silence
+				<img src="./src/icon/switch.png"/>
+			</div>
+			<div>
+				Profile Settings
+			</div>
+			<div>
+				Account Settings
+			</div>
+			<div>
+				Privacy Settings
+			</div>
+			<div>
+				Notification Settings
+			</div>
+			<div>
+				Customization
+			</div>
+			<div>
+				About
+			</div>
+			<button class="button redbutton login" id="signout" onclick="signout()">Sign Out</button>
+		</div
+
+
+		><div id="black" class="wrapper">
+		<!--#################### Black Screen, represent external app/games ####################-->
+		black</div>
+</div>
+
+<!-- Status bar at top -->
+<div class="red float" id="topbar">
+	<div id="back" onclick="leaveSettings()"></div>
+	<div id="timeleft">--</div>
+	<div id="min">min</div>
+	<div class="bodytext" id="todest">
+		<div style="top:0px">from <b id="current">Spadina</b></div>
+		<div style="bottom:0px">to <b id="destin">Please Select Destination Below</b></div>
+	</div>
+	<div id="notify">Delays at station<br/>expected time 4</div>
+	<div id="baravatar" onclick="toSettings()"><img src="./src/icon/settings.png"/><div style="background-image: url(./src/icon/avatar.png)"></div></div>
+</div>
+
+<!-- Navigation bar at bottom -->
+<div id="navigation">
+	<div id="navCutter">
+		<div><img src="./src/icon/info.png" alt="Status"/><span>Status</span></div
+		><div><img src="./src/icon/news.png" alt="News"/><span>News</span></div
+		><div><img src="./src/icon/games.png" alt="Games"/><span>Games</span></div
+		><div><img src="./src/icon/messages.png" alt="People"/><span>Messages</span></div>
+		<div id="navShadow"></div>
+	</div>
+</div>
+
+</div>
+
+
+<!-- Initialization that assignes elements ids or attributes. -->
+<script type="text/javascript">
+	init()
+</script>
+
+
+</body>
+
+</html>
