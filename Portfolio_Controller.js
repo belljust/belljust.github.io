@@ -104,7 +104,7 @@ function Run_TA_Software(){
 				  '<td><img src="Misc_Pics/left.png" height="40" width="70" onclick="PrevPhoto()"></td>' +
 				  '<td><h2>Viewing: Uoft TA Software </h2></td>' +
 				  '<td class="counter">(1/11)<td>' +
-				  '<td><img src="Misc_Pics/right.png" height="40" width="70" onclick="NextPhoto()"></td>' +
+				  '<td><a><img src="Misc_Pics/right.png" height="40" width="70" onclick="NextPhoto()"></a></td>' +
 				  '</tr></table>';
 	$(".Controls").html(heading);
 	CurrentFolder = 'TA_Software';
@@ -129,7 +129,7 @@ function Run_YakYik(){
 				  '<td><img src="Misc_Pics/left.png" height="40" width="70" onclick="PrevPhoto()"></td>' +
 				  '<td><h2>Viewing: Yak-Yik Clone </h2></td>' +
 				  '<td class="counter">(1/8)<td>' +
-				  '<td><img src="Misc_Pics/right.png" height="40" width="70" onclick="NextPhoto()"></td>' +
+				  '<td><a><img src="Misc_Pics/right.png" height="40" width="70" onclick="NextPhoto()"></a></td>' +
 				  '</tr></table>';
 	$(".Controls").html(heading);
 	CurrentFolder = 'Yak-Yik';
@@ -143,7 +143,7 @@ function Run_WW(){
 				  '<td><img src="Misc_Pics/left.png" height="40" width="70" onclick="PrevPhoto()"></td>' +
 				  '<td><h2>Viewing: Warehouse Wars </h2></td>' +
 				  '<td class="counter">(1/7)<td>' +
-				  '<td><img src="Misc_Pics/right.png" height="40" width="70" onclick="NextPhoto()"></td>' +
+				  '<td><a><img src="Misc_Pics/right.png" height="40" width="70" onclick="NextPhoto()"></a></td>' +
 				  '</tr></table>';
 	$(".Controls").html(heading);
 	CurrentFolder = 'WW';
